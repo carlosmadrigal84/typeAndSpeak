@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Speech Synthesis</title>
+  <link href="https://unpkg.com/nes.css@2.2.1/css/nes.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="speaker">
+
+      <h1>Speaker</h1>
+
+      <label for="default_select">Voices</label>
+        <div class="nes-select">
+            <select required id="default_select" name="voice" id="voices">
+                <option value="" disabled selected hidden>Select a Voice</option>
+            </select>
+        </div>
+
+      <label for="rate">Rate:</label>
+      <input name="rate" type="range" min="0" max="2" value="1" step="0.1">
+      
+      <label for="pitch">Pitch:</label>
+
+      <input name="pitch" type="range" min="0" max="2" step="0.1">
+      <label for="textarea_field">Textarea</label>
+      <textarea id="textarea_field" name="text" class="nes-textarea">Hola como estas</textarea>
+      <button type="button" id="stop"class="nes-btn is-error">Error</button>
+      <button type="button" id="speak" class="nes-btn is-success">Success</button>
+
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
